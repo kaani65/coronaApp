@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.awt.BorderLayout;
 import java.awt.Desktop;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -24,6 +25,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class MainMenue implements ActionListener {
 
@@ -35,8 +38,10 @@ public class MainMenue implements ActionListener {
 	private static JButton staySafe;
 	private static JLabel success;
 	private static ImageIcon icon;
+	private static JTextField coronaSearchfield;
+	private static JButton coronaSearchButton;
 
-	public static final String IMG_PATH = "src/coronaApp/coronapic.png";
+	//public static final String IMG_PATH = "src/coronaApp/coronapic.png";
 
 	public void mainMenue(JFrame frame, JPanel panel) {
 
@@ -54,16 +59,31 @@ public class MainMenue implements ActionListener {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}*/
+		ImageIcon icon = new ImageIcon("/Users/drs-0507-u/eclipse-workspace/coronapplication/src/coronaApp/coronapic.jpg");
+		JButton coronapic = new JButton("", icon);
 		
+	
+		coronapic.setContentAreaFilled(false);
+		coronapic.setBounds(90, 30, 200, 200);
+		panel.add(coronapic);
+		
+		coronaSearchfield = new JTextField();
+		coronaSearchfield.setBounds(110, 250, 150, 30);
+		panel.add(coronaSearchfield);
+		
+		coronaSearchButton = new JButton("Corona Search");
+		coronaSearchButton.setBounds(80, 300, 80, 25);
+		coronaSearchButton.setSize(202,60);
+		panel.add(coronaSearchButton);
 		
 		newestNumbers = new JButton("Newst Numbers");
-		newestNumbers.setBounds(100, 500, 80, 25);
+		newestNumbers.setBounds(80, 500, 80, 25);
 		newestNumbers.setSize(202, 60);
 		newestNumbers.addActionListener((ActionListener) new MainMenue());
 		panel.add(newestNumbers);
 
 		staySafe = new JButton("Stay Safe");
-		staySafe.setBounds(100, 400, 80, 25);
+		staySafe.setBounds(80, 400, 80, 25);
 		staySafe.setSize(202, 60);
 		staySafe.addActionListener((ActionListener) new MainMenue());
 		panel.add(staySafe);

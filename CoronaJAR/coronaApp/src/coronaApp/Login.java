@@ -1,5 +1,6 @@
 package coronaApp;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -10,23 +11,30 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class Login {
 
-	private static JLabel userLabel;
+ static JLabel userLabel;
 	private static JTextField userText;
 	private static JLabel passwordLabel;
 	private static JPasswordField passwordText;
 	private static JButton button;
 	private static JLabel success;
-	private static JLabel iconCorona;
+	
 
 	public void login(JFrame frame, JPanel panel, MainMenue mMenue) {
 
-		ImageIcon icon = new ImageIcon("coronapplication/src/coronaApp/coronapic.jpg");
-				iconCorona = new JLabel(icon);
-				iconCorona.setBounds(10,20,80,25);
-				panel.add(iconCorona);
+		/*
+		Create image as Icon
+		*/
+		
+		ImageIcon icon = new ImageIcon("/Users/drs-0507-u/eclipse-workspace/coronapplication/src/coronaApp/coronapic.jpg");
+		JButton coronapic = new JButton("", icon);
+		
+		coronapic.setContentAreaFilled(false);
+		coronapic.setBounds(90, 30, 200, 200);
+		panel.add(coronapic);
 		
 		userLabel = new JLabel("User");
 		userLabel.setBounds(10, 450, 80, 25);
