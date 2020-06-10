@@ -22,7 +22,6 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		JPanel panel = new JPanel();
 		JFrame frame = new JFrame();
 		MainMenue mMenue =  new MainMenue();
@@ -30,7 +29,6 @@ public class main {
 		
 		frame.setSize(375, 667);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
 		frame.add(panel);
 		
 		panel.setLayout(null);
