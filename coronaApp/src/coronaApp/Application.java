@@ -19,9 +19,9 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-import Controler.OracleDsSingleton;
-import Controler.Person;
 import Controler.PersonDAO;
+import Model.OracleDsSingleton;
+import Model.Person;
 import View.InitiateLogin;
 import View.InitiateMainMenue;
 

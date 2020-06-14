@@ -5,6 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import Model.OracleDsSingleton;
+import Model.Person;
+
 public class PersonDAO {
 
 	public PersonDAO(){}

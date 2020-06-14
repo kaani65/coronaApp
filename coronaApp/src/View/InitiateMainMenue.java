@@ -28,9 +28,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-import Controler.Person;
 import Controler.PersonDAO;
-import Controler.OracleDsSingleton;
+import Model.OracleDsSingleton;
+import Model.Person;
 
 
 public class InitiateMainMenue implements ActionListener {
